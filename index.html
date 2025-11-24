@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For My Love</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: #b3e5ff; /* sky blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Soft floating decorations */
+  .decor {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #ffd3f0;
+    box-shadow: -20px -10px #ffe2f5, 20px -10px #ffe2f5, 20px 20px #ffe2f5, -20px 20px #ffe2f5;
+    opacity: 0.45;
+    animation: float 6s infinite ease-in-out;
+  }
+  .d1 { top: 20px; left: 30px; animation-delay: 0s; }
+  .d2 { top: 90px; right: 50px; animation-delay: 1s; transform: scale(0.9);}  
+  .d3 { bottom: 70px; left: 60px; animation-delay: 2s; transform: scale(1.1);} 
+  .d4 { bottom: 40px; right: 40px; animation-delay: 3s; transform: scale(0.8);} 
+
+  @keyframes float {
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-18px) scale(1.05); }
+    100% { transform: translateY(0) scale(1); }
+  }
+
+  .container {
+    width: 100%;
+    max-width: 750px;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* CARD PAGE */
+  #cardPage {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+  }
+
+  #cardPage img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 4px solid #ff8fb7;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin-bottom: 15px;
+  }
+
+  #cardPage h1 {
+    font-size: 26px;
+    color: #ff4f8b;
+  }
+
+  #openBtn {
+    margin-top: 20px;
+    background: #ff4f8b;
+    padding: 12px 25px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  #openBtn:hover {
+    background: #ff1f6c;
+  }
+
+  /* LETTER PAGE */
+  #letterPage {
+    display: none;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    animation: slideUp 0.8s ease both;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+  }
+
+  #letterPage img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 4px solid #ff8fb7;
+    display: block;
+    margin: 0 auto 15px auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  #letterPage h2 {
+    color: #ff4f8b;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .letter-box {
+    background: #ffe6ef;
+    padding: 20px;
+    border-radius: 15px;
+    line-height: 1.6;
+    font-size: 16px;
+    position: relative;
+    border: 2px dashed #ffb0d4;
+  }
+
+  /* mini flowers */
+  .mini {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: #ff8fb7;
+    border-radius: 50%;
+    box-shadow: -8px -4px #ffc7dd, 8px -4px #ffc7dd, 8px 8px #ffc7dd, -8px 8px #ffc7dd;
+    opacity: 0.7;
+  }
+  .m1 { top: -12px; right: 20px; }
+  .m2 { bottom: -12px; left: 25px; }
+  .m3 { top: 50%; left: -15px; }
+  .m4 { top: 50%; right: -15px; }
+
+  .signature {
+    margin-top: 18px;
+    text-align: right;
+    font-weight: bold;
+    color: #ff4f8b;
+    font-size: 20px;
+    font-family: "Brush Script MT", "Pacifico", cursive;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Decorations -->
+<div class="decor d1"></div>
+<div class="decor d2"></div>
+<div class="decor d3"></div>
+<div class="decor d4"></div>
+
+<div class="container">
+
+  <!-- CARD PAGE -->
+  <div id="cardPage">
+    <img src="/20251122_225831.jpg" alt="photo" />
+
+    <h1>For My jaan, my sunflower, my mango juice 💗</h1>
+    <button id="openBtn">aste kore click maro 😜💌</button>
+  </div>
+
+  <!-- LETTER PAGE -->
+  <div id="letterPage">
+
+    <img src="/20251122_225831.jpg" alt="photo" />
+
+    <h2>My Love!! 💖</h2>
+
+    <div class="letter-box">
+      <div class="mini m1"></div>
+      <div class="mini m2"></div>
+      <div class="mini m3"></div>
+      <div class="mini m4"></div>
+
+      <p>To my Sunflower again🌻💗,</p>
+
+      <p>
+       amar jaaaaannnnnn,,,, ami tomake oneekkkk bhalobashiiiii... tumi amare sunflower r rose gift korso🥺. kotto joss ekta gift dila amare... ami koto jotno kore rakhsi tmr gifts🥹..ami jani ami tomake majhe majhe a jalai..annoyed feel koro tumi and setar jonno sorry🥲.. ami bhoy peye gele amon kori😑.. ami tomake harate chai na... ami tomar sathei thakte chai..ami jani you care about me a lot but tumi show korao na.. you love me but dekhao na temon... tomar list e etto etto chele thakte tumi amare pick korso🥺. kotto lucky ami tomake peye.. tumi amar jan ..amar kolija and i love you soo muchh. ami tomake onek onek onek bhalobashi... ami tmk chartesi na.. tumi amar first girlfriend and tmkei last porjonto niye jete chai.. tumi pashe thakle ami tmr jonno shob korbo...amon na j abege shob boltesi... i promise to you..jodi tumi amar pashe thako ami tmk happy rakhar jonne shob korbo... cause you deserve happiness.. shob somoy hashikhushi thakba.. tomake hashle onek shundor lage.. always amar pashe thaiko.. amare chere jeyo na..ami always tmr pashe achi and thakbo.. ami tomake prove kore dekhabo j ami tmk chere jaowar jonne dhori nai... tmk bhalobashi and tmr proti e loyal thakbo.. onno keu ashbe na i promise to you... ami hoyto akhono tomake thik moto bujhte parina but ami shikhtesi... ami tmr moner moto hobo.. and InShaAllah nijeke oi porjay niye jbo jeno tumi proud feel kore bolte paro j amar husband ekjon professional web developer. i'll make you happy and i'll make you feel better...ami just tomakeii bhalobashi and future eo tmk bhalobashte chai.. please bolo j tumi shudhu amar.. amar hoyei thakba.. tmr mukh theke egula shunle amr onekk bhalo lage.. onek happy feel hoy.. pleaseee bolo tumi just amar.. Suraiya sudhu amarrrrrrr.. boloooooooooooooo
+
+      </p>
+
+      <p>I love you amar jaaaaaaaaannnnnnn ❤️</p>
+
+      <div class="signature">— Sujon</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const openBtn = document.getElementById("openBtn");
+  const cardPage = document.getElementById("cardPage");
+  const letterPage = document.getElementById("letterPage");
+
+  openBtn.addEventListener("click", () => {
+    cardPage.style.display = "none";
+    letterPage.style.display = "block";
+  });
+</script>
+
+</body>
+</html>
